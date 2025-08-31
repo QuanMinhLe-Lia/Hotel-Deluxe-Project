@@ -1,0 +1,304 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 5, 2025, 3:44:13 PM
+    Author     : Overlordil
+*/
+
+.parent {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100vh;
+}
+
+.div2 {
+    background-color: #d3d3d3;
+    padding: 20px;
+}
+
+.div3 {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.div3 table thead th {
+    background-color: #dbeeff;
+    color: #444;
+    padding: 10px;
+}
+
+.date-format {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #333;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Style cho bảng bộ lọc ngoài */
+table.inputs {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table.inputs td {
+    padding: 8px 12px;
+    vertical-align: middle;
+    border: none;
+}
+
+table.inputs input[type="date"],
+table.inputs input[type="number"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table.inputs button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+table.inputs .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+table.inputs .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+table.inputs .btn-default {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+table.inputs .btn-default:hover {
+    background-color: #e2e6ea;
+}
+
+/* Tùy chỉnh bố cục các nhóm bộ lọc nếu cần */
+.filter-group {
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    margin-right: 8px;
+    display: inline-block;
+    min-width: 140px;
+}
+
+.fake-thead-filter {
+    width: calc(100% - 17px); /* Trừ đi độ rộng thanh scrollbar */
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    overflow: hidden; /* Ẩn phần thừa do padding */
+}
+
+.fake-filter-table {
+    table-layout: fixed; /* Đồng bộ kích thước cột */
+    width: 100% !important;
+    margin-bottom: 0;
+    border-collapse: collapse;
+    background: #f8f9fa;
+}
+
+/* Ẩn các cột không có filter (No., Note, Name, Status, Detail, Action) */
+.fake-filter-table .filter-row th:nth-child(1),  /* Cột No. (index 0) */
+.fake-filter-table .filter-row th:nth-child(7),  /* Cột Note (index 6) */
+.fake-filter-table .filter-row th:nth-child(8),  /* Cột Name (index 7) */
+.fake-filter-table .filter-row th:nth-child(11), /* Cột Detail (index 10) */
+.fake-filter-table .filter-row th:nth-child(12) { /* Cột Action (index 11) */
+    display: none;
+}
+
+/* Căn chỉnh kích thước và padding */
+.fake-filter-table th {
+    padding: 8px !important; 
+    border: 1px solid #ddd !important;
+    box-sizing: border-box;
+    visibility: visible !important; /* Đảm bảo hiển thị */
+}
+
+/* Đồng bộ width với DataTable */
+#bookingTable {
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+/* Ẩn header gốc của các cột không có filter */
+#bookingTable thead th:nth-child(1),
+#bookingTable thead th:nth-child(7),
+#bookingTable thead th:nth-child(8),
+#bookingTable thead th:nth-child(11),
+#bookingTable thead th:nth-child(12) {
+    background: #dbeeff !important; 
+}
+
+.date-part,
+.time-part {
+    white-space: nowrap; /* Ngăn nội dung bên trong bị chia thành nhiều dòng */
+}
+
+/* Style cho container bộ lọc trong sidebar */
+.sidebar-filters {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+/* Điều chỉnh cho các ô select và label */
+.filter-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 13px;
+    color: #333;
+}
+.filter-group select {
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.filter-group select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.status-filter .btn {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hiệu ứng hover */
+.status-filter .btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Hiển thị nút đang được chọn (active) */
+.status-filter .btn.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+td {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+
+    opacity: 1 !important;
+    filter: none !important;
+    text-shadow: none !important;
+    transform: none !important;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+table {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px !important;
+    margin: 5px !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-accept {
+    background-color: #28a745;
+    color: #fff;
+}
+.btn-accept:hover {
+    background-color: #218838;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+.btn-late {
+    background-color: #ffc107;
+    color: #343a40;
+}
+.btn-late:hover {
+    background-color: #e0a800;
+}
+
+button.close {
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0.5rem;
+    color: #000; 
+}
+
+button.close span {
+    font-size: 4rem;
+}
+
+.btn-detail {
+    background-color: #f8f9fa;
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    border-radius: 5px;
+    padding: 10px 20px !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.btn-detail:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+table thead th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}

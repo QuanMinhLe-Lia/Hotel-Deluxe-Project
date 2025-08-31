@@ -1,0 +1,444 @@
+/* Sử dụng font chữ hiện đại */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #cfd9df);
+    margin: 0;
+    padding: 0;
+}
+
+table.user-list thead th:nth-child(6),
+table.user-list tbody td:nth-child(6) {
+    display: none !important;
+}
+
+.btn-add-room {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    border: 2px solid #f0ad4e;
+    color: #f0ad4e !important;
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add-room:hover {
+    background: linear-gradient(135deg, #f0ad4e, #f0ad4e) !important;
+    border-color: #f0ad4e !important;
+    color: #fff !important;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-edit {
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+.btn-edit:hover {
+    background-color: #138496;
+}
+
+/* Giới hạn chiều ngang của danh sách */
+.nav-contacts {
+    list-style: none;
+    margin: 0 !important;        /* canh giữa danh sách nếu cần */
+    padding: 0 !important;
+    max-width: 300px;      /* chỉnh lại giá trị này theo nhu cầu */
+}
+
+/* Thiết lập cho các mục li kéo dài 100% */
+.nav-contacts > li {
+    width: 100%;
+    margin: 0 !important;             /* loại bỏ margin mặc định nếu có */
+    padding: 0 !important;            /* loại bỏ padding mặc định nếu có */
+}
+
+/* Cho thẻ <a> chiếm toàn bộ chiều rộng của li */
+.nav-contacts > li > a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;  /* tính cả padding vào chiều rộng */
+    padding: 10px 15px !important;
+    margin: 0 !important;
+    text-decoration: none;
+    color: #666;
+}
+
+/* Hiệu ứng hover và active cho mục */
+.nav-contacts > li:hover > a,
+.nav-contacts > li.active > a {
+    background-color: #e0e0e0;
+}
+
+.nav.nav-pills > li > a {
+    color: #777;
+    border-radius: 0!important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav.nav-pills > li.active > a,
+.nav.nav-pills > li.active > a:hover,
+.nav.nav-pills > li.active > a:focus {
+    color: #fff ;
+    background-color: #2ECC71 ;
+
+}
+
+.nav-contacts {
+    margin-bottom: 20px;
+}
+
+.nav-contacts li a {
+    color: #666;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.nav-contacts li .badge {
+    background: none;
+    font-weight: 500;
+    color: #333;
+}
+
+.nav-contacts li.active .badge {
+    color: #fff;
+    background: none;
+}
+
+.nav-contacts li {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-contacts li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Căn chỉnh container và tạo khoảng cách */
+.container.bootstrap.snippets.bootdey {
+    margin-top: 30px;
+}
+
+/* Tạo kiểu cho tiêu đề bảng */
+.table thead tr {
+    background-color: #3498db;
+    color: #fff;
+}
+.table thead tr th {
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Cải thiện kiểu cho bảng */
+.table {
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.table tbody tr {
+    transition: background-color 0.3s;
+}
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+.table tbody tr td {
+    border-top: none;
+    padding: 15px 10px;
+}
+
+/* Nâng cấp hiệu ứng hover cho các liên kết trong bảng */
+.table a.table-link {
+    transition: all 0.3s ease;
+}
+.table a.table-link:hover {
+    transform: scale(1.1);
+}
+
+/* Cải tiến nút, ví dụ cho nút Ban/Active trong Modal */
+.btn {
+    border-radius: 20px;
+    padding: 6px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style cho Sidebar nếu có */
+.sidebar {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Modal styling */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Status Dot cho hiển thị trạng thái trong modal */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    background-color: currentColor;
+}
+
+/* Màu cho trạng thái */
+.status-active {
+    color: #28a745;
+}
+.status-inactive {
+    color: #dc3545;
+}
+
+/* Footer nếu cần thiết */
+footer {
+    padding: 20px 0;
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+}
+
+/* Bao bọc chung để sắp xếp ảnh + thông tin user trên cùng một dòng */
+.user-info {
+    display: flex;            /* Hiển thị flex để xếp ảnh + nội dung ngang hàng */
+    align-items: center;      /* Canh giữa theo trục dọc */
+}
+
+/* Ảnh đại diện */
+.user-info img {
+    width: 50px;              /* Kích thước ảnh */
+    height: 50px;
+    border-radius: 4px;       /* Bo góc nhẹ */
+    margin-right: 10px;       /* Khoảng cách giữa ảnh và phần text */
+    object-fit: cover;        /* Ảnh sẽ được cắt phù hợp để vừa khung */
+}
+
+/* Khu vực chứa tên và role */
+.user-details {
+    display: flex;
+    flex-direction: column;   /* Đặt tên và role theo cột (dòng trên/dòng dưới) */
+}
+
+/* Tên người dùng (màu xanh, cỡ lớn) */
+.user-details .user-link {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #337ab7;           /* Màu xanh dương (Bootstrap default) */
+    text-decoration: none;    /* Bỏ gạch chân mặc định của thẻ <a> */
+    margin: 0;
+    margin-bottom: 2px;       /* Tạo chút khoảng cách phía dưới tên */
+    display: block;           /* Để đảm bảo xuống dòng riêng */
+}
+
+/* Vai trò (role) hiển thị bên dưới tên */
+.user-details .user-subhead {
+    font-size: 0.9em;
+    color: #777;              /* Màu xám nhạt */
+    margin: 0;
+    display: block;
+}
+
+.table-link {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+}
+.table-link.text-info {
+    color: #5bc0de; /* màu xanh của Bootstrap */
+}
+.table-link.danger {
+    color: #d9534f; /* màu đỏ của Bootstrap */
+}
+.table-link:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+/* Modal tổng thể */
+.modal-pull-right .modal-dialog {
+    max-width: 800px !important;  /* Điều chỉnh giá trị theo nhu cầu */
+    margin: 50px auto;
+    transform: none;
+}
+
+/* Modal Content */
+.modal-pull-right .modal-dialog .modal-content {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Modal */
+.modal-pull-right .modal-dialog .modal-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 20px;
+    border-bottom: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Tiêu đề (nếu dùng thẻ h4 trong .modal-header) */
+.modal-pull-right .modal-dialog .modal-header h4 {
+    margin: 0;
+}
+
+/* Nút đóng (X) trong header */
+.close-right-modal {
+    cursor: pointer;
+}
+
+.close-right-modal:hover {
+    opacity: .8;
+}
+
+/* Body Modal */
+.modal-pull-right .modal-dialog .modal-body {
+    padding: 25px 20px;
+    background-color: #fff;
+    font-size: 1.5rem; 
+    color: #333;
+}
+
+/* Form Group */
+.modal-pull-right .modal-dialog .modal-body .form-group {
+    margin-bottom: 20px;
+}
+.modal-pull-right .modal-dialog .modal-body .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+}
+.modal-pull-right .modal-dialog .modal-body .form-group .form-control {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.modal-pull-right .modal-dialog .modal-body .form-group .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Footer Modal */
+.modal-pull-right .modal-dialog .modal-footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e9ecef;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end; /* Đẩy các nút về bên phải */
+    gap: 10px;                 /* Khoảng cách giữa các nút */
+}
+
+/* Nút hành động */
+.modal-pull-right .modal-dialog .modal-footer .btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+.modal-pull-right .modal-dialog .modal-footer .btn:hover {
+    opacity: 0.9;
+}
+
+/* Ví dụ: Nút Cancel (màu đỏ) và Create Room (màu xanh) */
+.btn-silver {
+    background-color: #dc143c;
+    color: #fff;
+    border: none;
+}
+.btn-green {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+}
+
+/* Đặt label và input trên cùng một hàng */
+.form-group-inline {
+    display: flex;            /* Bố cục flex để label và input nằm ngang */
+    align-items: center;      /* Canh giữa theo chiều dọc */
+    gap: 0px;                /* Khoảng cách giữa label và input */
+    margin-bottom: 20px;      /* Khoảng cách giữa các form-group */
+}
+
+/* Label không bị xuống dòng, không có margin bottom */
+.form-group-inline label {
+    margin-bottom: 0;
+    white-space: nowrap;      /* Không cho label xuống dòng */
+    font-weight: 600;         /* Giúp label rõ nét hơn (tùy chỉnh) */
+}
+
+/* Input giữ nguyên hoặc tùy chỉnh width theo ý muốn */
+.form-group-inline .form-control {
+    width: 100%;              /* Giữ nguyên độ rộng, chiếm hết phần còn lại */
+    max-width: 700px;         /* Nếu muốn giới hạn chiều rộng tối đa */
+    border-radius: 6px;       /* Bo góc nhẹ nhàng */
+}
+
+/* Tăng kích cỡ chữ cho header, body và footer của modal */
+.modal-pull-right .modal-dialog .modal-header,
+.modal-pull-right .modal-dialog .modal-body,
+.modal-pull-right .modal-dialog .modal-footer {
+    font-size: 1.5rem !important;  /* Hoặc 24px nếu dùng px */
+}
+
+/* Tăng kích cỡ chữ cho toàn bộ nội dung bên trong modal */
+.modal-pull-right .modal-dialog .modal-content * {
+    font-size: 1.5rem !important;
+}
+
+
+input[readonly] {
+    background-color: #f0f0f0 !important;
+}
+
+.table-link {
+    position: relative; /* Để định vị tooltip so với nút */
+}
+
+/* Tạo tooltip bằng pseudo-element */
+.table-link[data-tooltip]::after {
+    content: attr(data-tooltip); /* Lấy nội dung từ thuộc tính data-tooltip */
+    position: absolute;
+    bottom: 100%; /* Hiển thị phía trên nút */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none; /* Không ảnh hưởng đến sự tương tác */
+    transition: opacity 0.3s ease;
+    margin-bottom: 8px; /* Khoảng cách giữa tooltip và nút */
+}
+
+/* Hiển thị tooltip khi hover */
+.table-link[data-tooltip]:hover::after {
+    opacity: 1;
+}
+

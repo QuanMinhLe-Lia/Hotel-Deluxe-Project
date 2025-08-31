@@ -1,0 +1,107 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 25, 2025, 2:01:09 PM
+    Author     : Overlordil
+*/
+
+
+.dashboard-content {
+    margin-left: 200px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/*Account Chart*/
+.account-chart-container {
+    position: relative;
+    margin-left: -170px !important;
+    padding: 15px;
+    max-width: 100% !important;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.account-chart-container canvas {
+    width: 100% !important;
+    height: 350px !important;
+    max-height: 400px;
+}
+
+.account-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.account-grid .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.account-grid .column > div {
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.account-grid .active {
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.account-grid .inactive {
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.account-grid .total {
+    padding: 10px;
+}
+
+/*Room Chart*/
+.room-chart-container{
+    position: relative;
+    margin-left: 40px !important;
+    padding: 15px;
+    max-width: 100% !important;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.room-chart-container canvas {
+    width: 100% !important;
+    height: 350px !important;
+    max-height: 400px;
+}
+
+/*Feedback Chart*/
+.feedback-chart-container{
+    position: relative;
+    margin-left: 40px !important;
+    padding: 15px;
+    max-width: 100% !important;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-chart-container canvas {
+    width: 100% !important;
+    height: 200px !important;
+    max-height: 400px;
+}
+
+.glyphicon-star {
+    color: gold;
+}
